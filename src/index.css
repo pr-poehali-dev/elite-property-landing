@@ -59,9 +59,18 @@
 
 @layer components {
   .marble-texture {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
-    background-size: 400% 400%;
-    animation: marble-shift 8s ease-in-out infinite;
+    background:
+      radial-gradient(
+        circle at 20% 80%,
+        rgba(212, 175, 55, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(212, 175, 55, 0.1) 0%,
+        transparent 50%
+      ),
+      linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
   }
 
   @keyframes marble-shift {
